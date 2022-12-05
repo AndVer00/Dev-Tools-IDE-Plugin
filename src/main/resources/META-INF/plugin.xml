@@ -1,0 +1,34 @@
+<idea-plugin>
+    <id>org.example.so-plugin</id>
+    <name>Stack Overflow Search</name>
+    <vendor email="angwar2019@yandex.ru" url="https://github.com/AndVer00">MyRandomCompany</vendor>
+
+    <description><![CDATA[
+    ---------Search on Stack Overflow---------
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action
+                id="StackOverflow.Search.Editor"
+                class="SearchAction"
+                text="Search on Stack Overflow"
+                description="Search on stack overflow in editor">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+        <action
+                id="StackOverflow.Search.Console"
+                class="SearchAction"
+                text="Search on Stack Overflow"
+                description="Search on stack overflow in console">
+            <add-to-group group-id="ConsoleEditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
