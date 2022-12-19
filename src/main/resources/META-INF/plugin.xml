@@ -30,5 +30,12 @@
                 description="Search on stack overflow in console">
             <add-to-group group-id="ConsoleEditorPopupMenu" anchor="last"/>
         </action>
+        <action
+                id="StackOverflow.CheckLogs"
+                class="CheckLogsAction"
+                text="Check Your Logs from Searching on Stack Overflow"
+                description="Check your logs from searching on stack overflow">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
     </actions>
 </idea-plugin>
