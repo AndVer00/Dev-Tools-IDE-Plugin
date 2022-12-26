@@ -18,12 +18,18 @@ public class CheckLogsAction extends AnAction {
                 String line = s.nextLine();
                 test.append(line).append('\n');
             }
+
+            String title = e.getPresentation().getDescription();
+
+            if (String.valueOf(test).equals("")){
+                String message = "Your current log file is empty";
+                Messages.showMessageDialog(e.getProject(), message, title, Messages.getQuestionIcon());
+            }
+            else {
+                Messages.showMessageDialog(e.getProject(), String.valueOf(test), title, Messages.getQuestionIcon());
+            }
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
         }
-
-        String title = e.getPresentation().getDescription();
-        String message = "Your current log file:";
-        Messages.showMessageDialog(e.getProject(), String.valueOf(test), title, Messages.getQuestionIcon());
     }
 }

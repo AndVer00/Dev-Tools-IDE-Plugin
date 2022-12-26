@@ -51,7 +51,6 @@ public class SearchAction extends AnAction {
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
-
             BrowserUtil.browse(searchingMessage);
         }
     }
